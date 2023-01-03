@@ -1,6 +1,8 @@
 # flutter_colored_boxes
 
-A new Flutter project.
+Esse desafio foi criar vários containers coloridos na tela, para evitar o excesso de código, criei uma função que delimita as linhas desenhadas na tela e seu espaçamento.
+
+![Screenshot](https://github.com/gkpiccoli/crispy-happiness/blob/main/Screenshot_20230103_135358.png)
 
 ## Getting Started
 
