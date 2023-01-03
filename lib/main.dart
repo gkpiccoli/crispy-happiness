@@ -17,22 +17,14 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           leading: IconButton(
               onPressed: () {}, icon: const Icon(Icons.add_task_rounded)),
-          title: const Text('Flutter: Desenhando na tela'),
+          title: const Text('Flutter: Primeiros Passos'),
         ),
         body: ListView(
           children: [
-            Container(
-              color: Colors.blue,
-              child: const Text('Agua'),
-            ),
-            Container(
-              color: Colors.green,
-              child: const Text('Gelo'),
-            ),
-            Container(
-              color: Colors.red,
-              child: const Text('Vapor'),
-            ),
+            BlocosColoridos(
+                cor1: Colors.greenAccent,
+                cor2: Colors.blueAccent,
+                cor3: Colors.pink)
           ],
         ),
       ),
@@ -50,6 +42,36 @@ class BlocosColoridos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    double altura = 180;
+    double largura = 100;
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Container(
+            child: Row(
+              children: [
+                Container(
+                  color: cor1,
+                  height: altura,
+                  width: largura,
+                ),
+                Container(
+                  color: cor2,
+                  height: altura,
+                  width: largura,
+                ),
+                Container(
+                  color: cor3,
+                  height: altura,
+                  width: largura,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
