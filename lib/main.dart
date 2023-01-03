@@ -22,9 +22,21 @@ class MyApp extends StatelessWidget {
         body: ListView(
           children: [
             BlocosColoridos(
-                cor1: Colors.greenAccent,
-                cor2: Colors.blueAccent,
-                cor3: Colors.pink)
+              cor1: Colors.greenAccent,
+              cor2: Colors.blueAccent,
+              cor3: Colors.pink,
+              cor4: Colors.indigo,
+            ),
+            BlocosColoridos(
+                cor1: Colors.white,
+                cor2: Colors.purple,
+                cor3: Colors.pinkAccent,
+                cor4: Colors.green),
+            BlocosColoridos(
+                cor1: Colors.red,
+                cor2: Colors.black38,
+                cor3: Colors.yellow,
+                cor4: Colors.tealAccent)
           ],
         ),
       ),
@@ -34,41 +46,50 @@ class MyApp extends StatelessWidget {
 
 class BlocosColoridos extends StatelessWidget {
   const BlocosColoridos(
-      {super.key, required this.cor1, required this.cor2, required this.cor3});
+      {super.key,
+      required this.cor1,
+      required this.cor2,
+      required this.cor3,
+      required this.cor4});
 
   final Color cor1;
   final Color cor2;
   final Color cor3;
+  final Color cor4;
 
   @override
   Widget build(BuildContext context) {
-    double altura = 180;
-    double largura = 100;
+    double altura = 170;
+    double largura = 120;
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Container(
-            child: Row(
-              children: [
-                Container(
-                  color: cor1,
-                  height: altura,
-                  width: largura,
-                ),
-                Container(
-                  color: cor2,
-                  height: altura,
-                  width: largura,
-                ),
-                Container(
-                  color: cor3,
-                  height: altura,
-                  width: largura,
-                ),
-              ],
-            ),
+          padding: EdgeInsets.fromLTRB(7, 8, 9, 10),
+          child: Row(
+            children: [
+              Container(
+                color: cor1,
+                height: altura,
+                width: largura,
+              ),
+              Container(
+                color: cor2,
+                height: altura,
+                width: largura,
+              ),
+              Container(
+                color: cor3,
+                height: altura,
+                width: largura,
+              ),
+              Container(
+                color: cor4,
+                height: altura,
+                width: largura,
+              )
+            ],
           ),
         ),
       ],
