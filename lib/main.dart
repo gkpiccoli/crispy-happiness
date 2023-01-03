@@ -21,18 +21,18 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            BlocosColoridos(
+            const BlocosColoridos(
               cor1: Colors.greenAccent,
               cor2: Colors.blueAccent,
               cor3: Colors.pink,
               cor4: Colors.indigo,
             ),
-            BlocosColoridos(
+            const BlocosColoridos(
                 cor1: Colors.white,
                 cor2: Colors.purple,
                 cor3: Colors.pinkAccent,
                 cor4: Colors.green),
-            BlocosColoridos(
+            const BlocosColoridos(
                 cor1: Colors.red,
                 cor2: Colors.black38,
                 cor3: Colors.yellow,
@@ -66,7 +66,7 @@ class BlocosColoridos extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Padding(
-          padding: EdgeInsets.fromLTRB(7, 8, 9, 10),
+          padding: const EdgeInsets.fromLTRB(7, 8, 9, 10),
           child: Row(
             children: [
               Container(
