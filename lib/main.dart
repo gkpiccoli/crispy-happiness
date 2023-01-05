@@ -20,19 +20,19 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter: Primeiros Passos'),
         ),
         body: ListView(
-          children: [
-            const BlocosColoridos(
+          children: const [
+            BlocosColoridos(
               cor1: Colors.greenAccent,
               cor2: Colors.blueAccent,
               cor3: Colors.pink,
               cor4: Colors.indigo,
             ),
-            const BlocosColoridos(
+            BlocosColoridos(
                 cor1: Colors.white,
                 cor2: Colors.purple,
                 cor3: Colors.pinkAccent,
                 cor4: Colors.green),
-            const BlocosColoridos(
+            BlocosColoridos(
                 cor1: Colors.red,
                 cor2: Colors.black38,
                 cor3: Colors.yellow,
